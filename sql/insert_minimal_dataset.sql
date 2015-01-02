@@ -16,8 +16,8 @@
 
 /*====================== USER TABLES ==============================*/
 /* -------------------------------- for "organization_details" --- */
-INSERT INTO organization_details (organization_name)
-  VALUES ('USA App Developers'), ('USA Health Providers');
+INSERT INTO organization_details (organization_name, organization_id)
+  VALUES ('USA App Developers',101), ('USA Health Providers',102);
 
 
 /* ---------------------------------------- for "user_details" --- 
@@ -46,20 +46,15 @@ INSERT INTO organization_details (organization_name)
 INSERT INTO device (device) VALUES ('Fitbit'), ('Nike+FuelBand');
 
 /* -------------------------------------------- for "platform" --- */
-INSERT INTO platform (platform) VALUES ('iOS'), ('Android'),('Tablet'),('Phone');
+INSERT INTO platform (platform) VALUES ('iOS'), ('Android'),('Windows 8.1 OS'),('Blackberry 10 OS');
 
 /* ------------------------------------------------- for "tag" --- */
-SELECT insert_tag ('Sports', NULL);
-SELECT insert_tag ('Mind and Meditation', NULL);
-SELECT * FROM tag;
-SELECT insert_tag ('Athletics', 'Sports');
-SELECT insert_tag ('Track', 'Athletics');
-SELECT insert_tag ('Swimming', 'Sports');
-SELECT insert_tag ('Skiing', 'Sports');
-SELECT insert_tag ('Karate', 'Sports');
-SELECT insert_tag ('Luge', 'should fail');
-SELECT insert_tag ('Luge', 'Sports');
-SELECT insert_tag ('Sports', 'should fail');
+SELECT insert_tag ('healthcare', null);
+SELECT insert_tag ('onlie health communities', 'healthcare');
+SELECT insert_tag ('behavioral health wellness', 'healthcare');
+SELECT insert_tag ('hospitals', 'healthcare'),;
+SELECT insert_tag ('government', 'healthcare');
+
 SELECT * FROM tag;
 
 --  Look at the tag hierarchy using category names.
@@ -74,18 +69,19 @@ JOIN tag as s
 -- OK to INSERT into a view but COPY does not work.
 --  For this, a trigger was added to the insert to get the
 --  organization_id given the organization_name (because 'app' uses the org ID)
-INSERT INTO app_view (app_name, organization_name, icon, objective)
+/*INSERT INTO app_view (app_name, organization_name, icon, objective)
   VALUES
 ('Free Throw Tracker',
   'USA App Developers',
   'BasketTracker.jpg',
     'Keep track of your free throw records, post videos showing your best run, and compete against your friends!'), 
 ('Kick Perfect','USA App Developers','KickCounter.jpg','Superimpose a master''s kick poses on your own.');
-
+*/
 /* --- for "app", "app_platform", "app_device", "app_tag" via "staging.app_view_loader" --- */
 -- For bulk loading, use the staging.app_view_loader table: it triggers
--- an INSERT function that matches organization names to org ids.
-\COPY staging.app_view_loader (app_name, tags, organization_name, icon, objective, platforms, devices) FROM 'minimal_app_view.csv' WITH (FORMAT csv, NULL '', HEADER)
+-- an INSERT function that matches organization names to org id. 
+
+\COPY staging.app_view_loader (platforms, tags, app_name, app_id, vendor, vendor_id, logo, advertisement_text, description) FROM 'APP.csv' WITH (FORMAT csv, NULL '', HEADER)
 ;
 
 
@@ -101,28 +97,28 @@ INSERT INTO app_view (app_name, organization_name, icon, objective)
 -- app_id, recipient_id, recommender_id
 INSERT INTO staging.app_recommendation_loader (app_name, recommender_nickname, recipient_nickname)
   VALUES
-('Jog Route Tracker','valentina','tanya'),
-('Laughter is the Best Medicine','valentina','ivy'),
-('Laughter is the Best Medicine','doctor','valentina'),
-('Laughter is the Best Medicine','doctor','ivy');
+('Helpouts','valentina','tanya'),
+('Circleof6','valentina','ivy'),
+('Ask Karen','doctor','valentina'),
+('MyChart','doctor','ivy');
 
 /* ------------------------------------------ for 'app_review' --- */
 -- app_id, user_id, user_role, usability, effectiveness, review, platform_id
-INSERT INTO staging.app_review_loader (app_name, user_nickname, user_role, usability, effectiveness, review, platform)
+INSERT INTO staging.app_review_loader (apP_name, user_nickname, user_role, usability, effectiveness, review, platform)
   VALUES
-('Free Throw Tracker','valentina','user','good','ok','The UI was ok to use, but I didn''t get better after a month.','iOS'),
-('Free Throw Tracker','tanya','user','ok','ok','I lost motivation after about 3 plays, but the UI was pretty easy to use.','iOS'),
-('Kick Perfect','valentina','user','ok','good','Awesome app if only we could line up the pictures better.','iOS'),
-('Kick Perfect','tanya','user','ok','good','Good app but hard to line up the pictures, especially if you''re short.','Android'),
-('Laughter is the Best Medicine','doctor','health provider','good','good','This app has materially improved my patients'' mood score and reduced their dependence on drugs. Highly recommended.',NULL),
-('Laughter is the Best Medicine','valentina','user','good','good','A quick easy way to brighten your day.','Android'),
-('Laughter is the Best Medicine','appmaker','user','good','good','Free and fabulous.','Phone'),
-('Meditation for Healing','appmaker','user','good','good','This is the best app for meditation.',NULL),
-('Jog Route Tracker','doctor','health provider','ok','ok','About half of my patients stick with this -- various reasons for quitting include boredom or some difficulty with the UI.',NULL),
-('Jog Route Tracker','nurse','health provider','good','ok','Very easy to use on the iOS','iOS'),
-('Jog Route Tracker','valentina','user','ok','ok','Not good for using on the tablet, but OK for a small phone.','Phone'),
-('Ski Better','valentina','user','ok','good','Hard to use but really informative.','iOS'),
-('Swim Workout Time Split Tracker','doctor','health provider','ok','ok','Patients who work out in groups found this motivational but required training to use the app.',NULL),
-('Swim Workout Time Split Tracker','valentina','user','ok','good','I loved competing and collaborating with old swim team friends across the country, but the UI could be easier.','Android');
+('HealthVault','valentina','user','good','ok','Reliable and simple app.  It was easy to understand. I was really engaged.','{Windows 8.1 OS}'),
+('HealthVault','tanya','user','ok','ok','Discovered how to access my doctor conveniently.  Simmple and user-friendly.','{Windows 8.1 OS}'),
+('Just-in-Case','valentina','user','ok','good','Secure and private.  I felt comfortable giving my information.','{iOS}'),
+('Just-in-Case','tanya','user','ok','good','Good app but hard to navigate.','{Android}'),
+('Keep Spriggy Safe:Game','doctor','health provider','good','good','Super user-friendly app and the process is easy to understand.  I felt comfortable using it.',NULL),
+('Keep Spriggy Safe:Game','valentina','user','good','good','My son enjoyed using this app and he learned a lot about his health.','{Android}'),
+('Keep Spriggy Safe:Game','appmaker','user','good','good','Free, simple, and improved my knowledge about health for children.','{Blackberry 10 S}'),
+('HealthVault','appmaker','user','good','good','Comprehensive, secure, navigable.',NULL),
+('Helpouts','doctor','health provider','ok','ok','User-friendly, secure, and great level of engagement for users.',NULL),
+('Helpouts','nurse','health provider','good','ok','Because I know I Google, I tried it.  I like the videos.  I think I can talk to my doctor.','{Android}'),
+('Helpouts','valentina','user','ok','ok','I like it because my information is secure and private. I understood the intent of the app.','{Android}'),
+('PTSD Coach','valentina','user','ok','good','Hard to use but really informative.','{iOS}'),
+('MyChart','doctor','health provider','ok','ok','The features of this app make it easy to use and move around. Improved my knowledge significantly.',NULL),
+('MyChart','valentina','user','ok','good','I loved competing and collaborating with the information to make decisions but the UI could be easier.','{Android}');
 
 
