@@ -1,0 +1,9 @@
+,,,,,
+,,,,,
+"user_id serial PRIMARY KEY,","avatar varchar(512),","nickname varchar(64),",first_name(64) NOT NULL,"last_ name varchar(64) NOT NULL,",start_date date NOT NULL
+1000,http://www.doppelme.com/DM1283514ZK6/avatar.gif?stamp=41988.9291087963,Marky,Mark,Hamill,12/17/14
+2000,http://www.doppelme.com/DM1283514R7B/avatar.gif?stamp=41988.8877314815,Lair,Larry,Shine,
+3000,http://www.doppelme.com/DM1283514CM8/avatar.gif?stamp=41988.8901273148,Irie,Iris,Lane,
+4000,http://www.doppelme.com/DM1283514BFT/avatar.gif?stamp=41988.8913657407,Tony,Anthony,Paul,
+5000,http://img1.jurko.net/avatar_17039.gif,Henny,Stephen,Luke,
+6000,http://www.avatarsdb.com/avatars/catwomen_dance.gif,Sunny,Sonia,House,
