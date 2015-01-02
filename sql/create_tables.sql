@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS app (
   organization_id int REFERENCES organization_details (organization_id),
   icon varchar(64) DEFAULT 'default.png',
   advertisement_text varchar(128),
-  objective varchar(256) NOT NULL
+  objective varchar(2048) NOT NULL
 );
 
 
@@ -155,9 +155,12 @@ CREATE TABLE IF NOT EXISTS organization_admin (
 CREATE SCHEMA IF NOT EXISTS staging;
 CREATE TABLE IF NOT EXISTS staging.app_view_loader (
   app_name varchar(128) NOT NULL,
-  organization_name varchar(64) NOT NULL,
-  icon varchar(128) NOT NULL,
-  objective varchar(256) NOT NULL,
+  advertisement_text varchar (1024),
+  app_id int,	
+  vendor varchar(64) NOT NULL,
+  vendor_id int,
+  logo varchar(128) NOT NULL,
+  description varchar(2048),
   tags varchar(128)[],
   platforms varchar(128)[],
   devices varchar(128)[],
@@ -168,24 +171,40 @@ CREATE OR REPLACE FUNCTION trigger_app_view_loader() RETURNS TRIGGER
 AS $trigger_app_view_loader$
    DECLARE
     current_app_id integer;
+    current_organization_id integer; 
     matched_id integer;
     element varchar(128);
     r RECORD;
    BEGIN
 
+      -- Go row by row and insert into the respective correct dimensional tables.
+      FOR r IN SELECT * FROM staging.app_view_loader WHERE load=TRUE LOOP
+	
+	-- organization_details
+	SELECT MAX(ORGANIZATION_ID) INTO CURRENT_ORGANIZATION_ID FROM ORGANIZATION_DETAILS AS o WHERE R.VENDOR = o.organization_name;  
+	IF (current_organization_id IS NOT NULL) THEN
+		IF (r.vendor_id is NOT NULL AND r.vendor_id != current_organization_id) THEN 
+			RAISE EXCEPTION 'Vendors IDs do not match.current ID is: %', Current_Organization_id;
+		END IF; 
+	ELSE 
+		INSERT INTO organization_details (organization_id, organization_name) values (r.vendor_id, r.vendor);
+	END IF;
+	END LOOP;
+
       INSERT INTO app (app_name, organization_id, icon, objective) (
-        SELECT app_name, organization_id, icon, objective
+        SELECT app_name, vendor_id as organization_id, 'app_icon_'||app_id||'.png' as icon, description as objective
           FROM staging.app_view_loader AS avl
-        JOIN organization_details AS od
+        /* JOIN organization_details AS od
           ON avl.organization_name = od.organization_name
+	*/
         WHERE load = TRUE
       );
 
       -- Go row by row and insert into the respective correct dimensional tables.
       FOR r IN SELECT * FROM staging.app_view_loader WHERE load=TRUE LOOP
           SELECT max(app_id) INTO current_app_id FROM app WHERE r.app_name = app.app_name;
-
-          -- app_platform
+	
+        -- app_platform
           IF (r.platforms  IS NOT NULL) THEN
             FOREACH element in ARRAY r.platforms
             LOOP
