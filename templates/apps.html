@@ -11,9 +11,10 @@
     {{ macros.app_summary(app) }}
   {% endfor %}
   {%  if app_summaries|length == 1 %}
+  {%  if reviews is defined %} 
     {% for review in reviews %}
       {{ macros.app_review(review) }}
-    {% endfor %}
+    {% endfor %} {% endif %}
   {% endif %}
 
 
