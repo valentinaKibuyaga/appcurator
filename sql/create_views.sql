@@ -217,9 +217,10 @@ CREATE OR REPLACE VIEW top_tags_view AS
         FROM tag_apps
         GROUP BY category_name
     ), review_cts AS (
-        SELECT app_review.app_id, COUNT(DISTINCT review) as rct
+        SELECT tag_apps.app_id, 
+	SUM(CASE WHEN review IS NULL THEN 0 ELSE 1 END) as rct
         FROM app_review
-        LEFT JOIN tag_apps
+        RIGHT JOIN tag_apps
             ON app_review.app_id = tag_apps.app_id
         GROUP BY app_review.app_id,  tag_apps.app_id
     ), ranked_apps AS (
