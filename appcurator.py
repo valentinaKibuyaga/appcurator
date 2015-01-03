@@ -222,7 +222,6 @@ def get_apps(appid=None, tags=None, **kwargs):
                 " WHERE app_id = %s;",
                 args=[appid],
                 columns=starter_columns)
-        app_summaries[0]["hasreviews"] = True
         result["reviews"] = db_select( """
                 SELECT nickname, avatar, platform, user_role,
                     usability, effectiveness, review, review_date
@@ -231,6 +230,8 @@ def get_apps(appid=None, tags=None, **kwargs):
                 args=[appid],
                 columns=[ "nickname", "avatar", "platform", "user_role",
                     "usability", "effectiveness", "review", "review_date"])
+	if len(result["reviews"]) >0: 
+            app_summaries[0]["hasreviews"] = True
         for review in result["reviews"]:
             pass
     elif tags is not None:
@@ -276,6 +277,7 @@ def get_apps(appid=None, tags=None, **kwargs):
         # The 'categories', 'devices', 'platforms' (and eventually the links
         # come back as pipe-joined strings rather than as lists.
         # Break them apart into lists.
+        print 'appsummaries is not none, it is:', app_summaries
         if len(app_summaries) > 0:
             for summary in app_summaries:
                 for key in ('categories', 'devices', 'platforms'):
