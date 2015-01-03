@@ -49,11 +49,10 @@ INSERT INTO device (device) VALUES ('Fitbit'), ('Nike+FuelBand');
 INSERT INTO platform (platform) VALUES ('iOS'), ('Android'),('Windows 8.1 OS'),('Blackberry 10 OS');
 
 /* ------------------------------------------------- for "tag" --- */
-SELECT insert_tag ('healthcare', null);
-SELECT insert_tag ('onlie health communities', 'healthcare');
-SELECT insert_tag ('behavioral health wellness', 'healthcare');
-SELECT insert_tag ('hospitals', 'healthcare'),;
-SELECT insert_tag ('government', 'healthcare');
+SELECT insert_tag ('online health communities',NULL);
+SELECT insert_tag ('behavioral health wellness',NULL);
+SELECT insert_tag ('hospitals',NULL),;
+SELECT insert_tag ('government', NULL);
 
 SELECT * FROM tag;
 
