@@ -51,7 +51,7 @@ INSERT INTO platform (platform) VALUES ('iOS'), ('Android'),('Windows 8.1 OS'),(
 /* ------------------------------------------------- for "tag" --- */
 SELECT insert_tag ('online health communities',NULL);
 SELECT insert_tag ('behavioral health wellness',NULL);
-SELECT insert_tag ('hospitals',NULL),;
+SELECT insert_tag ('hospitals',NULL);
 SELECT insert_tag ('government', NULL);
 
 SELECT * FROM tag;
