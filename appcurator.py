@@ -222,22 +222,22 @@ def get_apps(appid=None, tags=None, **kwargs):
                 " WHERE app_id = %s;",
                 args=[appid],
                 columns=starter_columns)
-        try:         
-            result["reviews"] = db_select( """
-                    SELECT nickname, avatar, platform, user_role,
-                        usability, effectiveness, review, review_date
-                    FROM get_reviews(%s);
-                    """,
-                    args=[appid],
-                    columns=[ "nickname", "avatar", "platform", "user_role",
-                        "usability", "effectiveness", "review", "review_date"])
-                    print 'reviews for one app:', result ["reviews"]
-        except Error e:
-            print 'Error is:', e		
-	if len(result["reviews"]) >0: 
-            app_summaries[0]["hasreviews"] = True
-        for review in result["reviews"]:
-            pass
+        reviews = db_select( """
+                SELECT nickname, avatar, platform, user_role,
+                    usability, effectiveness, review, review_date
+                FROM get_reviews(%s);
+                """,
+                args=[appid],
+                columns=[ "nickname", "avatar", "platform", "user_role",
+                    "usability", "effectiveness", "review", "review_date"])
+        if reviews is not None: 
+            result['reviews'] = reviews
+            print 'reviews for one app:', result ["reviews"]
+        if reviews is not None and len(result["reviews"]) >0:
+            if app_summaries is not None:  
+                app_summaries[0]["hasreviews"] = True
+            for review in result["reviews"]:
+                pass
     elif tags is not None:
         # Show the apps for the requested tags only.
         tags = [t.lower() for t in tags]
@@ -255,7 +255,7 @@ def get_apps(appid=None, tags=None, **kwargs):
                 args = tags,
                 columns=starter_columns)
 
-    if len(app_summaries)==0 or (appid is None and tags is None):
+    if app_summaries is None or len(app_summaries)==0 or (appid is None and tags is None):
         # Show the top few tags, with brief snapshots
         # of the apps per tag.
         tag_rows = db_select("""
