@@ -222,14 +222,18 @@ def get_apps(appid=None, tags=None, **kwargs):
                 " WHERE app_id = %s;",
                 args=[appid],
                 columns=starter_columns)
-        result["reviews"] = db_select( """
-                SELECT nickname, avatar, platform, user_role,
-                    usability, effectiveness, review, review_date
-                FROM get_reviews(%s);
-                """,
-                args=[appid],
-                columns=[ "nickname", "avatar", "platform", "user_role",
-                    "usability", "effectiveness", "review", "review_date"])
+        try:         
+            result["reviews"] = db_select( """
+                    SELECT nickname, avatar, platform, user_role,
+                        usability, effectiveness, review, review_date
+                    FROM get_reviews(%s);
+                    """,
+                    args=[appid],
+                    columns=[ "nickname", "avatar", "platform", "user_role",
+                        "usability", "effectiveness", "review", "review_date"])
+                    print 'reviews for one app:', result ["reviews"]
+        except Error e:
+            print 'Error is:', e		
 	if len(result["reviews"]) >0: 
             app_summaries[0]["hasreviews"] = True
         for review in result["reviews"]:
