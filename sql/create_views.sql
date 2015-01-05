@@ -110,7 +110,7 @@ CREATE OR REPLACE VIEW app_summaries AS
   ), user_review AS (
     SELECT app_id,
     SUM( CASE WHEN usability = 'bad' THEN 1.0
-              WHEN usability = 'ok' THEN 2.0
+
               ELSE 3.0
           END ) / COUNT( usability ) AS avg_usability, 
     SUM( CASE WHEN effectiveness = 'bad' THEN 1.0
