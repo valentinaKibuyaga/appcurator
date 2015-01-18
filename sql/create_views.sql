@@ -59,6 +59,8 @@ CREATE OR REPLACE VIEW app_device_view AS
 CREATE OR REPLACE VIEW app_platform_view AS
   WITH distinct_platforms AS (
     SELECT DISTINCT app_id, platform_id
+    FROM app_platform UNION
+    SELECT DISTINCT app_id, platform_id
     FROM app_review)
   SELECT dp.app_id, platform
   FROM distinct_platforms AS dp
