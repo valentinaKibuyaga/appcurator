@@ -1,0 +1,222 @@
+FYI...though this says app_id=16, it's 15.
+
+I only want to prototype fifteen apps.
+
+-[ RECORD 15 ]-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 16
+app_name           | HealthVault
+vendor_id          | 16
+logo               | https://www.healthvault.com/images/logos/logo.png
+advertisement_text | http://files2.coloribus.com/files/adsarchive/part_1258/12588705/file/beaufour-ipsen-tianjin-pharmaceutical-co-cactus-small-56023.jpg
+description        | Welcome to Microsoft HealthVault. Organize your familys health information. Be better prepared for doctor visits and unexpected emergencies. Create a more complete picture of your health, with you at the center.  Achieve your fitness goals.
+vendor             | Microsoft
+
+
+From: namusoke@hotmail.com
+To: tanya@tickel.net
+Subject: Records 12 & 13 & 14
+Date: Mon, 29 Dec 2014 23:04:12 -0600
+
+-[ RECORD 12 ]-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 12
+app_name           | Ask Karen
+vendor_id          | 12
+logo               | http://www.fsis.usda.gov/images/AskKaren_Web2.jpg
+advertisement_text | http://graphics8.nytimes.com/images/2005/06/15/business/adco.184.jpg
+description        | Ask Karen provides information for consumers about preventing foodborne illness, safe food handling and storage, and safe preparation of meat, poultry, and egg products.
+vendor             | usda.gov
+-[ RECORD 13 ]-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 13
+app_name           | Helpouts
+vendor_id          | 13
+logo               | https://ssl.gstatic.com/tee/images/logos/238790f94014048a5ddbca798211265a_logo-helpouts-2x.png
+advertisement_text | https://ssl.gstatic.com/tee/images/logos/238790f94014048a5ddbca798211265a_logo-helpouts-2x.png
+description        | Helpouts connects people who need help with people who can give help over live video. Get help across multiple topics right from your PC or mobile device.
+vendor             | Google
+-[ RECORD 14 ]-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 14
+app_name           | One Medical
+vendor_id          | 14
+logo               | http://onelife-production-assets.1life.com/assets/global/onemed_logo_hex_flat-f5f4df816038cb08f263f01a0448d59c.png
+advertisement_text | http://grixti.com/images/swme/CDR_Aug05-lrg.jpg
+description        |  With doctors in San Francisco, NYC, Washington DC, Boston, Chicago and Los Angeles, One Medical is committed to reinventing health care, one patient at a time.
+vendor             | 1Life Healthcare, Inc
+
+
+From: namusoke@hotmail.com
+To: tanya@tickel.net
+Subject: Records 10 & 11
+Date: Mon, 29 Dec 2014 23:00:56 -0600
+
+-[ RECORD 10 ]-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 10
+app_name           | myChildrens
+vendor_id          | 10
+logo               | https://lh6.ggpht.com/0XhNZ9rCgzgQxJpLr2zjl-mr8Nvc_8faliIb9QpRBQfaoP9YJh36B1bKGhaal7FNIQo=w300
+advertisement_text | http://yalemedlaw.com/wp-content/uploads/2010/07/baraclude.png
+description        | Highlights/Key Features:
+                   | 
+                   | Locate: The nearest Urgent Care Center, Emergency Room at the hospital’s main campus, Close To Home Center, and more.
+                   | 
+                   | Find a Doctor or Service: Search for your child’s doctor by name, program or service. View their profile, contact them or find them on the map.
+                   | 
+                   | Health Library: Access an A-Z listing of critical childhood health topics, from stages of growth and development to disease and injury prevention, procedures and tests.
+                   | 
+                   | My Child: Customized section for your child(ren) - immunization schedules, developmental milestones, and more.
+                   | 
+                   | Need-to-Know Information: Get hours, service descriptions, information about what to bring and what not to bring and general main campus information.
+vendor             | Nationwide Childrens Hospital
+-[ RECORD 11 ]-----+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 11
+app_name           | PTSD Coach
+vendor_id          | 11
+logo               | http://www.ptsd.va.gov/public/images/Coachscreen.png
+advertisement_text | http://yalemedlaw.com/wp-content/uploads/2010/07/baraclude.png
+description        | The PTSD Coach app can help you learn about and manage symptoms that often occur after trauma. Features include:
+                   | 
+                   |     Reliable information on PTSD and treatments that work
+                   |     Tools for screening and tracking your symptoms
+                   |     Convenient, easy-to-use tools to help you handle stress symptoms
+                   |     Direct links to support and help
+                   |     Always with you when you need it.
+vendor             | National Center for PTSD
+
+
+From: namusoke@hotmail.com
+To: tanya@tickel.net
+Subject: Record 8 & 9
+Date: Mon, 29 Dec 2014 22:56:50 -0600
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 8
+app_name           | MyChart
+vendor_id          | 8
+logo               | http://a3.mzstatic.com/us/r30/Purple1/v4/14/a1/36/14a1366e-4d38-888a-c3c3-ad5b396adfbf/icon175x175.jpeg
+advertisement_text | http://www.bambootrading.com/4300/4315.JPG
+description        | Use your existing MyChart account to manage your health information and communicate with your doctor on your mobile device.
+vendor             | Epic
+-[ RECORD 9 ]------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 9
+app_name           | My Way
+vendor_id          | 9
+logo               | https://lh4.ggpht.com/KzkeEGqVervAw8HWfKnZtmZh1n3XhH-UV74n-_EpXNoe22wz4qpF7y8lvZefBtnOGQ=w300
+advertisement_text | http://mmcneillie951.files.wordpress.com/2013/04/12.jpg
+description        | Find a Doctor or Department: Search for your child’s doctor by name, program or specialty. Selecting your child’s physician takes you to his or her interactive profile where you can place a phone call or get directions to their clinic location in the hospital.
+                   | Getting Around: Get hours, descriptions and directions to support services within the hospital, including the Center for Families, Social Work and Child Life. Or get information about what’s nearby the hospital, from banks to restaurants to museums and attractions.
+                   | Food & Drink: Get menus, prices and discount information to the various food services in or around the hospital.
+vendor             | Boston Childrens Hospital
+
+
+From: namusoke@hotmail.com
+To: tanya@tickel.net
+Subject: Record 6 & 7
+Date: Mon, 29 Dec 2014 22:51:55 -0600
+
+-[ RECORD 6 ]------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 6
+app_name           | Keep Spriggy Safe is a  Game
+vendor_id          | 6
+logo               | https://lh5.ggpht.com/zxPTtE7VzrZkk2UL5PrEKqSM7Tvt2y8GzjL7eliXQ3jvq3uSPq1uGF6vNpvxk7NzhJ3g=w300
+advertisement_text | https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTajYmL3uWfGcdw7h2bM2sJ2GblJQJLb6Q3dWGynlfeR_Z1Uie4NEiMlQ
+description        | 
+vendor             | Childrens Hospital of Wisconsin, Inc
+-[ RECORD 7 ]------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 7
+app_name           | Childrens On Call
+vendor_id          | 7
+logo               | https://lh5.ggpht.com/QGmGBJ2Ljqw885w3CBbgmJvopTTFI7R1QA9XtEwDcPzmg0Y9a3e4c1tsZGKdqRXS9Aw=w300
+advertisement_text | http://www.beautifullife.info/wp-content/uploads/2011/04/01/12.jpg
+description        | A free mobile app that helps you make informed decisions on what kind of care your child might need, and offers tips for making your little one feel better.
+vendor             | Childrens Hospital of Wisconsin, Inc
+
+
+From: namusoke@hotmail.com
+To: tanya@tickel.net
+Subject: Record 5
+Date: Mon, 29 Dec 2014 22:49:58 -0600
+
+[ RECORD 5 ]------+----------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 5
+app_name           | OnWatch™ - The Personal Safety App for College Students
+vendor_id          | 5
+logo               | http://a4.mzstatic.com/us/r30/Purple5/v4/a3/97/e8/a397e8d2-216a-5153-6a86-10ed943f4612/icon175x175.png
+advertisement_text | https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQuVQ8aBSTj5IGxgf5QQbFYPBhykPwKI9FpH3FZbU_Q9-ujtArpReyarw
+description        | OnWatch™ gives you the tools to alert the people you trust when you need help. Six customizable alert modes allow you the flexibility to alert your friends, your campus police, local 911 or a combination of all three whenever you need them.
+                   | 
+                   | Here’s how it works:
+                   | 
+                   | Need help right away? 
+                   | Launch OnWatch™ and with just two taps, you are connected to local 911 or your campus police, and a customized message is sent to your pre-selected friends via text and email.
+                   | 
+                   | Just need your friends?
+                   | Sometimes your friends are the only people you need. With just two taps, you can send a customized message to your pre-selected friends, letting them know that you need help.
+                   | 
+                   | Going out for a run alone?
+                   | Set the timer feature. When the timer expires, you will receive an alert. If you don’t respond to the alert, a customized message will automatically go out to your pre-selected friends.
+                   | 
+vendor             | Safety Alert Apps, Inc.
+-[ RECORD 4 ]------+----------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+app_id             | 4
+app_name           | LifeLine Response
+vendor_id          | 4
+logo               | http://a3.mzstatic.com/us/r30/Purple5/v4/67/85/c5/6785c541-9ca8-e537-3b3b-eecac4434c8c/icon175x175.png
+advertisement_text | https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSQ23qzqNNqyU66EBk4Ge4uMM8iYipS4xOoYYqYeCRgOGzAMxX6LuJOrw
+description        | ***Please note this version requires IOS 8 or higher***
+                   | 
+                   | LifeLine Response Enterprise is a MOBILE SAFETY SERVICE and is the ORGANIZATIONAL VERSION of LifeLine Response. It is meant
+ for organizations which have signed up for the service.
+                   | 
+                   | LifeLine Response for personal use is named under simply “LifeLine Response”.
+                   | 
+                   | What you need to know:
+                   | Today when dialing 9-1-1, it is assumed you can verbally articulate what is happening at the moment of an attack, LifeLine Response does NOT make this assumption.
+                   | 
+                   | This is MORE than simply a panic button app. Think of it as a home alarm system you can take with you everywhere you go.
+                   | 
+                   | Our Mission Statement:
+                   | We at LifeLine Response believe in safety through prevention.
+vendor             | Clandestine
+
+
+From: namusoke@hotmail.com
+To: tanya@tickel.net
+Subject: THESE ARE THE FIRST THREE RECORDS
+Date: Mon, 29 Dec 2014 22:35:48 -0600
+
+app_id             | 1
+app_name           | Just-in-case
+vendor_id          | 1
+logo               | http://www.just-in-case.info/static/images/jic_logo.png
+advertisement_text | http://www.caschettaconsulting.com/images/gal_twin_21.jpg
+description        | Let your friend know you are OK and alive.
+                   | Whenever you do something dangerous or risky , write a message to a friend. Set expiry date and in case you do not cancel alarm in time , your friend will get your mail. If wanted application can retrieve your GPS location and attach it to your message. Additionally application sends aLive signal to the server and allows your friends to check your location by SMS.
+vendor             | 23knots
+-[ RECORD 2 ]------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 2
+app_name           | Circleof6
+vendor_id          | 2
+logo               | http://a3.mzstatic.com/us/r30/Purple3/v4/f4/69/eb/f469ebe0-44b5-00fd-10d2-9d33adc1b4ba/icon175x175.jpeg
+advertisement_text | https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ7-l7ZzUL4Mlm418ZskmTsSpjStKxCkrLce8M552AdN0ZlV98Rk9YdFfCc
+description        | A personal safety app for everyone. Winner of the 2011 White House and HHS “Apps Against Abuse” Technology Challenge and Winner of Avon Foundation for Women/Institute of Medicine "Ending Violence @Home
+vendor             | The Line Campaign, Inc.
+-[ RECORD 3 ]------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+app_id             | 3
+app_name           | Guardly
+vendor_id          | 3
+logo               | http://a4.mzstatic.com/us/r30/Purple5/v4/c9/48/41/c948415f-b611-8a68-17b7-ae71d0c3b3f0/icon175x175.png
+advertisement_text | http://sites.duke.edu/pcourtney/files/2014/08/cropped-use-this-one.jpg
+description        | The fastest way to contact family, friends & local security teams when you need help.
+                   | 
+                   | One-tap quickly connects you with up to 15 safety contacts by conference call and/or private instant messaging.
+                   | 
+                   | - Advanced GPS location accuracy
+                   | - Alerts sent by phone call, email & SMS
+                   | - Snap + share photos with your group
+                   | - Easily escalate emergencies to 911
+                   | - Network failure protection
+                   | - Create unlimited groups
+vendor             | Guardly
+
