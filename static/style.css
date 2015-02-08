@@ -375,7 +375,7 @@ section {
 }
 
 #image_Walgreens{
-  position:relative;
-  width:600px;
-  height:400px;
+  position:absolute;
+  width:100px;
+  height:100px;
 }
