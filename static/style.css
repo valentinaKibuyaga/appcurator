@@ -374,8 +374,10 @@ section {
   min-with: 480px;
 }
 
-<div class=Walgreens>
-     <img>Centered!
-</div>
-
-<IMG class="Walgreens" src="{{ url_for('static', filename = 'images/icons/Walgreens.jpg') }}" alt="previous"> 
+IMG.Walgreens {
+     text-align: center;
+     position: absolute;
+     left: 0;
+     right: 0;
+}
+          
